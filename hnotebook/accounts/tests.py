@@ -12,5 +12,4 @@ class ProfileTestCases(TestCase):
         self.assertEqual(self.new_profile.bookmarks.count(), 0)
 
     def test_new_profile_has_default_picture(self):
-        default_picture = '/static/images/generic-profile-photo.png'
-        self.assertEqual(self.new_profile.picture, default_picture)
+        self.assertEqual(self.new_profile.picture, Profile.DEFAULT_PICTURE)
