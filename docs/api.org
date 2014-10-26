@@ -1,0 +1,9 @@
+* Api
+
+#+BEGIN_EXAMPLE
+/:profile_username
+/:profile_username/:hnotebook_name
+/:profile_username/:hnotebook_name/:habitation_id
+/:profile_username/:hnotebook_name/:habitation_id/reviews/:review_id
+/:profile_username/:hnotebook_name/:habitation_id/notes/:review_id
+#+END_EXAMPLE
