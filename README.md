@@ -4,7 +4,16 @@ HNotebook is a social housing search application. It makes easy to share with yo
 
 ## Dependencies
 
++ [Python3](https://www.python.org/downloads/)
++ [Pip](https://www.python.org/download)
+
 ## Installation
+
+```
+git clone https://github.com/marcwebbie/hnotebook.git
+cd hnotebook
+pip install requirements.pip
+```
 
 ## Quickstart
 
