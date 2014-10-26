@@ -39,6 +39,7 @@ INSTALLED_APPS = (
 
     # project
     'hnotebook.notebooks',
+    'hnotebook.accounts',
 )
 
 MIDDLEWARE_CLASSES = (
