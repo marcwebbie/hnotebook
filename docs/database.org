@@ -1,0 +1,70 @@
+* Database design
+
+** Schema
+
+*** Profile
+
+    | Column     | Type     | Constraints |
+    |------------+----------+-------------|
+    | first_name | string   |             |
+    | last_name  | string   |             |
+    | picture    | Image    |             |
+    | notebooks  | Notebook | multiple    |
+    | bookmarks  | Notebook | multiple    |
+
+*** Notebook
+
+    | Column      | Type       | Constraints |
+    |-------------+------------+-------------|
+    | name        | string     | required    |
+    | description | string     |             |
+
+*** Habitation
+
+    | Column            | Type     | Constraints           |
+    |-------------------+----------+-----------------------|
+    | notebook          | Notebook | foreign_key, required |
+    | description       | string   | required              |
+    | town              | string   | required              |
+    | address           | string   |                       |
+    | price             | double   | required              |
+    | caution           | double   |                       |
+    | guarantee         | double   |                       |
+    | maintenance_fee   | double   |                       |
+    | surface           | integer  |                       |
+    | num_bedroom       | integer  |                       |
+    | num_restroom      | integer  |                       |
+    | num_living_room   | integer  |                       |
+    | num_dining_room   | integer  |                       |
+    | balcony           | integer  |                       |
+    | num_car_park_slot | integer  |                       |
+    | elevator          | boolean  |                       |
+    | floor             | integer  |                       |
+    | kitchen           | boolean  |                       |
+    | offer_url         | string   |                       |
+
+*** Images
+
+    | Column      | Type       | Constraints           |
+    |-------------+------------+-----------------------|
+    | habitation  | Habitation | foreign_key, required |
+    | url         | string     | required              |
+    | description | string     |                       |
+
+*** Reviews
+
+    | Column     | Type       | Constraints           |
+    |------------+------------+-----------------------|
+    | habitation | Habitation | foreign_key, required |
+    | commenter  | Profile    | foreign_key, required |
+    | date       | datetime   | required              |
+    | rating     | int        | required              |
+    | text       | string     | required              |
+
+*** Notes
+
+    | Column     | Type       | Constraints           |
+    |------------+------------+-----------------------|
+    | habitation | Habitation | foreign_key, required |
+    | date       | datetime   | required              |
+    | text       | string     | required              |
