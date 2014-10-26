@@ -8,7 +8,7 @@
     |------------+----------+-------------|
     | first_name | string   |             |
     | last_name  | string   |             |
-    | picture    | Image    |             |
+    | picture    | image    |             |
     | notebooks  | Notebook | multiple    |
     | bookmarks  | Notebook | multiple    |
 
@@ -43,7 +43,7 @@
     | kitchen           | boolean  |                       |
     | offer_url         | string   |                       |
 
-*** Images
+*** Picture
 
     | Column      | Type       | Constraints           |
     |-------------+------------+-----------------------|
