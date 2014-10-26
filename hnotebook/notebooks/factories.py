@@ -11,3 +11,5 @@ class NotebookFactory(factory.DjangoModelFactory):
     @factory.Sequence
     def description(n):
         return 'description notebook{}'.format(n)
+
+    private = False

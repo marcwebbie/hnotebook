@@ -14,10 +14,11 @@
 
 *** Notebook
 
-    | Column      | Type       | Constraints |
-    |-------------+------------+-------------|
-    | name        | string     | required    |
-    | description | string     |             |
+    | Column      | Type    | Constraints |
+    |-------------+---------+-------------|
+    | name        | string  | required    |
+    | description | string  |             |
+    | private     | boolean |             |
 
 *** Habitation
 
