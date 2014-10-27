@@ -11,4 +11,6 @@ class NotebookModelTestCase(TestCase):
         notebook = Notebook.objects.create(name='testnotebook')
         self.assertEqual(notebook.private, False)
 
-    # test notebook names shouldnt contain spaces
+    def test_notebook_string_representation_shows_name(self):
+        notebook = Notebook.objects.create(name='testnotebook')
+        self.assertIn("testnotebook", str(notebook))
