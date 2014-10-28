@@ -4,7 +4,6 @@ from django.contrib.auth.models import User, AnonymousUser
 from django.db import models
 
 from hnotebook.notebooks.models import Notebook
-from .factories import UserFactory
 
 
 class Profile(models.Model):

@@ -1,6 +1,8 @@
 from django.contrib.auth.hashers import make_password
 from django.contrib.auth.models import User
 
+from .models import Profile
+
 import factory
 
 class UserFactory(factory.DjangoModelFactory):
@@ -16,3 +18,9 @@ class UserFactory(factory.DjangoModelFactory):
         return 'user{}'.format(n)
 
     email = factory.LazyAttribute(lambda o: '{0.username}@example.com'.format(o))
+
+class ProfileFactory(factory.DjangoModelFactory):
+    FACTORY_FOR = Profile
+
+    user = factory.SubFactory(UserFactory)
+    picture = Profile.DEFAULT_PICTURE
