@@ -29,8 +29,12 @@ class HousingModelTests(TestCase):
             town="Some city",
             address="Some address",
             price="700",
+            currency="$",
+            surface=50,
+            num_rooms=2,
         )
 
         self.assertIn("Rent", str(housing))
         self.assertIn("Flat", str(housing))
+        self.assertIn("$", str(housing))
         self.assertIn("700", str(housing))

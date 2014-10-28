@@ -31,6 +31,7 @@
     | town              | string   | required                  |
     | address           | string   |                           |
     | price             | double   | required                  |
+    | currency          | string   |                           |
     | caution           | double   |                           |
     | guarantee         | double   |                           |
     | maintenance_fee   | double   |                           |

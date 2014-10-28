@@ -32,6 +32,7 @@ class Housing(models.Model):
     address           = models.TextField()
 
     price             = models.FloatField(null=False)
+    currency          = models.CharField(max_length=10, default='$')
     caution           = models.FloatField(default=0.0)
     guarantee         = models.FloatField(default=0.0)
     maintenance_fee   = models.FloatField(default=0.0)
@@ -55,4 +56,6 @@ class Housing(models.Model):
         category_name = self.get_category_display()
         property_type_name = self.get_property_type_display()
         price = self.price
-        return '{}, {}, {}'.format(category_name, property_type_name, price)
+        currency = self.currency
+
+        return '{}, {}, {} {}'.format(category_name, property_type_name, currency, price)
