@@ -2,7 +2,7 @@ from django.test import TestCase
 
 from hnotebook.accounts.factories import ProfileFactory
 from .factories import NotebookFactory, HousingFactory
-from .models import Notebook, Housing, Review
+from .models import Notebook, Housing, Review, Note
 
 class NotebookModelTestCase(TestCase):
     def setUp(self):
@@ -62,3 +62,23 @@ class ReviewModelTestCase(TestCase):
         self.assertIn(review.commenter.username, str(review))
         self.assertIn(str(review.rating), str(review))
         self.assertIn(str(review.datetime), str(review))
+
+
+class NoteModelTestCase(TestCase):
+    def setUp(self):
+        self.profile = ProfileFactory()
+        self.commenter_profile = ProfileFactory()
+
+        self.notebook = NotebookFactory(name="testenotebook")
+        self.profile.notebooks.add(self.notebook)
+
+        self.housing = HousingFactory()
+
+    def test_add_review_to_housing(self):
+        note = Note.objects.create(
+            housing=self.housing,
+            text='contacted owner'
+        )
+
+        self.assertEqual(note.text, 'contacted owner')
+        self.assertIn(str(note.datetime), str(note))

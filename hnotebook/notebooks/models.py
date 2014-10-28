@@ -73,3 +73,11 @@ class Review(models.Model):
         rating = self.rating
         datetime = self.datetime
         return "{}, {}, {}".format(commenter_username, rating, datetime)
+
+class Note(models.Model):
+    housing = models.ForeignKey(Housing)
+    datetime = models.DateTimeField(auto_now=True)
+    text = models.TextField()
+
+    def __str__(self):
+        return "{}".format(self.datetime)

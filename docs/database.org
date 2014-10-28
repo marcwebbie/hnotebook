@@ -68,8 +68,8 @@
 
 *** Notes
 
-    | Column     | Type       | Constraints           |
-    |------------+------------+-----------------------|
-    | habitation | Habitation | foreign_key, required |
-    | date       | datetime   | required              |
-    | text       |
+    | Column  | Type     | Constraints           |
+    |---------+----------+-----------------------|
+    | Housing | Housing  | foreign_key, required |
+    | date    | datetime | required              |
+    | text    |          |                       |
