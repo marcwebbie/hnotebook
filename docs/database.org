@@ -20,29 +20,32 @@
     | description | string  |             |
     | private     | boolean |             |
 
-*** Habitation
+*** Housing
 
-    | Column            | Type     | Constraints           |
-    |-------------------+----------+-----------------------|
-    | notebook          | Notebook | foreign_key, required |
-    | description       | string   | required              |
-    | town              | string   | required              |
-    | address           | string   |                       |
-    | price             | double   | required              |
-    | caution           | double   |                       |
-    | guarantee         | double   |                       |
-    | maintenance_fee   | double   |                       |
-    | surface           | integer  |                       |
-    | num_bedroom       | integer  |                       |
-    | num_restroom      | integer  |                       |
-    | num_living_room   | integer  |                       |
-    | num_dining_room   | integer  |                       |
-    | balcony           | integer  |                       |
-    | num_car_park_slot | integer  |                       |
-    | elevator          | boolean  |                       |
-    | floor             | integer  |                       |
-    | kitchen           | boolean  |                       |
-    | offer_url         | string   |                       |
+    | Column            | Type     | Constraints               |
+    |-------------------+----------+---------------------------|
+    | notebook          | Notebook | foreign_key, required     |
+    | category          | string   | multiple_choice, required |
+    | property_type     | string   | multiple_choice, required |
+    | description       | string   | required                  |
+    | town              | string   | required                  |
+    | address           | string   |                           |
+    | price             | double   | required                  |
+    | caution           | double   |                           |
+    | guarantee         | double   |                           |
+    | maintenance_fee   | double   |                           |
+    | surface           | integer  | required                  |
+    | num_rooms         | integer  | required                  |
+    | num_bedroom       | integer  |                           |
+    | num_restroom      | integer  |                           |
+    | num_living_room   | integer  |                           |
+    | num_dining_room   | integer  |                           |
+    | num_balcony       | integer  |                           |
+    | num_car_park_slot | integer  |                           |
+    | elevator          | boolean  |                           |
+    | floor             | integer  |                           |
+    | kitchen           | boolean  |                           |
+    | offer_url         | string   | required                  |
 
 *** Picture
 
@@ -68,4 +71,4 @@
     |------------+------------+-----------------------|
     | habitation | Habitation | foreign_key, required |
     | date       | datetime   | required              |
-    | text       | string     | required              |
+    | text       |

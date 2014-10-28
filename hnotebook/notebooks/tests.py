@@ -1,7 +1,7 @@
 from django.test import TestCase
 
 from .factories import NotebookFactory
-from .models import Notebook
+from .models import Notebook, Housing
 
 class NotebookModelTestCase(TestCase):
     def setUp(self):
@@ -14,3 +14,23 @@ class NotebookModelTestCase(TestCase):
     def test_notebook_string_representation_shows_name(self):
         notebook = Notebook.objects.create(name='testnotebook')
         self.assertIn("testnotebook", str(notebook))
+
+class HousingModelTests(TestCase):
+    def setUp(self):
+        pass
+
+    def test_housing_instantiation(self):
+        notebook = NotebookFactory()
+        housing = Housing(
+            notebook=notebook,
+            category=Housing.RENT,
+            property_type=Housing.FLAT,
+            description="example description",
+            town="Some city",
+            address="Some address",
+            price="700",
+        )
+
+        self.assertIn("Rent", str(housing))
+        self.assertIn("Flat", str(housing))
+        self.assertIn("700", str(housing))
