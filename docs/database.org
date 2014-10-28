@@ -70,6 +70,6 @@
 
     | Column  | Type     | Constraints           |
     |---------+----------+-----------------------|
-    | Housing | Housing  | foreign_key, required |
+    | housing | Housing  | foreign_key, required |
     | date    | datetime | required              |
     | text    |          |                       |
