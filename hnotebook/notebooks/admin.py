@@ -1,3 +1,8 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import Notebook
+
+class NotebookAdmin(admin.ModelAdmin):
+    model = Notebook
+
+admin.site.register(Notebook, NotebookAdmin)
