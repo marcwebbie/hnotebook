@@ -1,3 +1,4 @@
+from django.contrib.auth.models import User
 from django.db import models
 
 class Notebook(models.Model):
@@ -59,3 +60,10 @@ class Housing(models.Model):
         currency = self.currency
 
         return '{}, {}, {} {}'.format(category_name, property_type_name, currency, price)
+
+class Review(models.Model):
+    housing = models.ForeignKey(Housing)
+    commenter = models.ForeignKey(User)
+    date = models.DateTimeField(auto_now=True)
+    rating = models.IntegerField()
+    text = models.TextField()

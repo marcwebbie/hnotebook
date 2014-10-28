@@ -58,13 +58,13 @@
 
 *** Reviews
 
-    | Column     | Type       | Constraints           |
-    |------------+------------+-----------------------|
-    | habitation | Habitation | foreign_key, required |
-    | commenter  | Profile    | foreign_key, required |
-    | date       | datetime   | required              |
-    | rating     | int        | required              |
-    | text       | string     | required              |
+    | Column    | Type     | Constraints           |
+    |-----------+----------+-----------------------|
+    | housing   | Housing  | foreign_key, required |
+    | commenter | User     | foreign_key, required |
+    | date      | datetime | required              |
+    | rating    | int      | required              |
+    | text      | string   | required              |
 
 *** Notes
 

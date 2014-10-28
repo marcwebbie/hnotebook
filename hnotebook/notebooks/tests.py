@@ -1,7 +1,8 @@
 from django.test import TestCase
 
-from .factories import NotebookFactory
-from .models import Notebook, Housing
+from hnotebook.accounts.factories import ProfileFactory
+from .factories import NotebookFactory, HousingFactory
+from .models import Notebook, Housing, Review
 
 class NotebookModelTestCase(TestCase):
     def setUp(self):
@@ -38,3 +39,23 @@ class HousingModelTestCase(TestCase):
         self.assertIn("Flat", str(housing))
         self.assertIn("$", str(housing))
         self.assertIn("700", str(housing))
+
+class ReviewModelTestCase(TestCase):
+    def setUp(self):
+        self.profile = ProfileFactory()
+        self.commenter_profile = ProfileFactory()
+
+        self.notebook = NotebookFactory(name="testenotebook")
+        self.profile.notebooks.add(self.notebook)
+
+        self.housing = HousingFactory()
+
+    def test_add_review_to_housing(self):
+        review = Review.objects.create(
+            housing=self.housing,
+            commenter=self.commenter_profile.user,
+            rating=5,
+            text='Awesome flat'
+        )
+
+        self.assertEqual(review.text, 'Awesome flat')
