@@ -59,3 +59,6 @@ class ReviewModelTestCase(TestCase):
         )
 
         self.assertEqual(review.text, 'Awesome flat')
+        self.assertIn(review.commenter.username, str(review))
+        self.assertIn(str(review.rating), str(review))
+        self.assertIn(str(review.datetime), str(review))

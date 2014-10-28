@@ -64,6 +64,12 @@ class Housing(models.Model):
 class Review(models.Model):
     housing = models.ForeignKey(Housing)
     commenter = models.ForeignKey(User)
-    date = models.DateTimeField(auto_now=True)
+    datetime = models.DateTimeField(auto_now=True)
     rating = models.IntegerField()
     text = models.TextField()
+
+    def __str__(self):
+        commenter_username = self.commenter.username
+        rating = self.rating
+        datetime = self.datetime
+        return "{}, {}, {}".format(commenter_username, rating, datetime)
