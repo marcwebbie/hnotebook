@@ -15,7 +15,7 @@ class NotebookModelTestCase(TestCase):
         notebook = Notebook.objects.create(name='testnotebook')
         self.assertIn("testnotebook", str(notebook))
 
-class HousingModelTests(TestCase):
+class HousingModelTestCase(TestCase):
     def setUp(self):
         pass
 
