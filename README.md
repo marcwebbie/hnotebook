@@ -4,6 +4,8 @@ HNotebook is a social housing search application. It makes easy to share with yo
 
 ## Dependencies
 
+HNotebook is written in Python with using [Django 1.7](https://docs.djangoproject.com/en/1.7/) framework.
+
 + [Python3](https://www.python.org/downloads/)
 + [Pip](https://www.python.org/download)
 
