@@ -19,6 +19,12 @@ pip install requirements.pip
 
 ## Quickstart
 
+```
+python manage.py runserver
+```
+
+Visit http://localhost:8000
+
 ## License ([MIT License](http://opensource.org/licenses/mit-license.php))
 
 Copyright © 2014 Marc Webb, marcwebbie@gmail.com
