@@ -1,7 +1,5 @@
 * Database design
-
 ** Schema
-
 *** Profile
 
     | Column     | Type     | Constraints |
