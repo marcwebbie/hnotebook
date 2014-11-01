@@ -1,4 +1,4 @@
-# HNotebook [![build status](https://travis-ci.org/marcwebbie/hnotebook.svg)](https://travis-ci.org/marcwebbie/hnotebook) [![Build Status](https://snap-ci.com/marcwebbie/hnotebook/branch/master/build_image)](https://snap-ci.com/marcwebbie/hnotebook/branch/master)
+# HNotebook [![Build Status](https://snap-ci.com/marcwebbie/hnotebook/branch/master/build_image)](https://snap-ci.com/marcwebbie/hnotebook/branch/master)
 
 HNotebook is a social housing search application. It makes easy to share with your friends and rent/buy the best place.
 
