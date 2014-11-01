@@ -23,11 +23,16 @@ pip install requirements.pip
 python manage.py runserver
 ```
 
-Visit http://localhost:8000
+Access application:
+```
+http://localhost:8000
+```
 
 to go to the admin page
 
+```
 http://localhost:8000/admin
+```
 
 ## License ([MIT License](http://opensource.org/licenses/mit-license.php))
 
