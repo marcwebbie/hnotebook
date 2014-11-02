@@ -7,3 +7,7 @@ class HomePageTestCase(TestCase):
     def test_root_url_returns_home_page(self):
         response = self.client.get('/')
         self.assertEqual(response.status_code, 200)
+
+    def test_homepage_has_hnotebook_in_title(self):
+        response = self.client.get('/')
+        self.assertIn("hnotebook", str(response.content).lower())
