@@ -2,14 +2,16 @@
 
 HNotebook is a social housing search application. It makes easy to share with your friends and rent/buy the best place.
 
-## Dependencies
+Live version at: (http://notebook-marcwebbie.rhcloud.com/)[http://notebook-marcwebbie.rhcloud.com/]
+
+### Dependencies
 
 HNotebook is written in Python with using [Django 1.7](https://docs.djangoproject.com/en/1.7/) framework.
 
 + [Python3](https://www.python.org/downloads/)
 + [Pip](https://www.python.org/download)
 
-## Installation
+### Installation
 
 ```
 git clone https://github.com/marcwebbie/hnotebook.git
@@ -17,7 +19,7 @@ cd hnotebook
 pip install requirements.pip
 ```
 
-## Quickstart
+### Quickstart
 
 ```
 python manage.py runserver
