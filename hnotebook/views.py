@@ -1,4 +1,5 @@
 from django.http import HttpResponse
+from django.shortcuts import render_to_response
 
 def homepage(self):
-    return HttpResponse("HNotebook - Login - Sign Up")
+    return render_to_response('home.html', {})
