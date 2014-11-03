@@ -11,3 +11,7 @@ class HomePageTestCase(TestCase):
     def test_homepage_has_hnotebook_in_title(self):
         response = self.client.get('/')
         self.assertIn("hnotebook", str(response.content).lower())
+
+    def test_homepage_has_login_string(self):
+        response = self.client.get('/')
+        self.assertIn("login", str(response.content).lower())

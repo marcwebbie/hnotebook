@@ -1,4 +1,4 @@
 from django.http import HttpResponse
 
 def homepage(self):
-    return HttpResponse("HNotebook")
+    return HttpResponse("HNotebook - Login")
