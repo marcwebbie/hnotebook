@@ -31,3 +31,7 @@ class HomePageTestCase(TestCase):
     def test_login_url_renders_login_template(self):
         found = resolve('/login/')
         self.assertEqual(found.kwargs['template_name'], 'login.html')
+
+    def test_homepage_has_login_string(self):
+        response = self.client.get('/signup/')
+        self.assertIn("sign up", str(response.content).lower())
