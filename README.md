@@ -2,7 +2,7 @@
 
 HNotebook is a social housing search application. It makes easy to share with your friends and rent/buy the best place.
 
-Live version at: (http://notebook-marcwebbie.rhcloud.com/)[http://notebook-marcwebbie.rhcloud.com/]
+Live version at: [http://notebook-marcwebbie.rhcloud.com/](http://notebook-marcwebbie.rhcloud.com/)
 
 ### Dependencies
 
