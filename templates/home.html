@@ -2,5 +2,7 @@
 {% load staticfiles %}
 
 {% block content %}
-HNotebook - Login - Sign Up
+<h1>Homepage</h1>
+<div><a id="login_button" href="{% url 'login' %}">Login</a></div>
+<div><a id="signup_button">Sign Up</a></div>
 {% endblock content %}
