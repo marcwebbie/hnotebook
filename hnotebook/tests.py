@@ -14,7 +14,11 @@ class HomePageTestCase(TestCase):
 
     def test_homepage_has_hnotebook_in_title(self):
         response = self.client.get('/')
-        self.assertIn("hnotebook", str(response.content).lower())
+        self.assertIn("homepage", str(response.content).lower())
+
+    def test_root_url_resolves_to_home_page_view(self):
+        found = resolve('/')
+        self.assertEqual(found.func, views.homepage)
 
     def test_homepage_has_login_string(self):
         response = self.client.get('/')
@@ -23,7 +27,3 @@ class HomePageTestCase(TestCase):
     def test_homepage_has_login_string(self):
         response = self.client.get('/')
         self.assertIn("sign up", str(response.content).lower())
-
-    def test_root_url_resolves_to_home_page_view(self):
-        found = resolve('/')
-        self.assertEqual(found.func, views.homepage)
